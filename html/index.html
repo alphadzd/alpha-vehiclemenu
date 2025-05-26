@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Vehicle Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="vehicle-menu" class="hidden">
+        <div class="menu-container">
+            <div class="menu-header">
+                <h2><i class="fas fa-car-side"></i> Vehicle Controls</h2>
+                <button id="close-menu"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="menu-section">
+                <div class="menu-item" id="engine-toggle">
+                    <div class="icon-container">
+                        <i class="fas fa-power-off"></i>
+                    </div>
+                    <span>Engine</span>
+                    <div class="status-indicator" id="engine-status"></div>
+                </div>
+                
+                <div class="menu-item" id="all-doors-toggle">
+                    <div class="icon-container">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <span>All Doors</span>
+                    <div class="status-indicator" id="all-doors-status"></div>
+                </div>
+                
+                <div class="menu-item" id="all-windows-toggle">
+                    <div class="icon-container">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <span>All Windows</span>
+                    <div class="status-indicator" id="all-windows-status"></div>
+                </div>
+            </div>
+            
+            <div class="menu-tabs">
+                <div class="tab-header">
+                    <div class="tab-item active" data-tab="doors">
+                        <i class="fas fa-door-open"></i>
+                        <span>Doors</span>
+                    </div>
+                    <div class="tab-item" data-tab="windows">
+                        <i class="fas fa-window-maximize"></i>
+                        <span>Windows</span>
+                    </div>
+                    <div class="tab-item" data-tab="seats">
+                        <i class="fas fa-chair"></i>
+                        <span>Seats</span>
+                    </div>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="doors-tab">
+                        <div class="menu-grid">
+                            <div class="menu-item" data-door="0">
+                                <div class="icon-container">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                                <span>Front Left</span>
+                                <div class="status-indicator" id="door-status-0"></div>
+                            </div>
+                            <div class="menu-item" data-door="1">
+                                <div class="icon-container">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                                <span>Front Right</span>
+                                <div class="status-indicator" id="door-status-1"></div>
+                            </div>
+                            <div class="menu-item" data-door="2">
+                                <div class="icon-container">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                                <span>Rear Left</span>
+                                <div class="status-indicator" id="door-status-2"></div>
+                            </div>
+                            <div class="menu-item" data-door="3">
+                                <div class="icon-container">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                                <span>Rear Right</span>
+                                <div class="status-indicator" id="door-status-3"></div>
+                            </div>
+                            <div class="menu-item" data-door="4">
+                                <div class="icon-container">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <span>Hood</span>
+                                <div class="status-indicator" id="door-status-4"></div>
+                            </div>
+                            <div class="menu-item" data-door="5">
+                                <div class="icon-container">
+                                    <i class="fas fa-suitcase"></i>
+                                </div>
+                                <span>Trunk</span>
+                                <div class="status-indicator" id="door-status-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="windows-tab">
+                        <div class="menu-grid">
+                            <div class="menu-item" data-window="0">
+                                <div class="icon-container">
+                                    <i class="fas fa-window-maximize"></i>
+                                </div>
+                                <span>Front Left</span>
+                                <div class="status-indicator" id="window-status-0"></div>
+                            </div>
+                            <div class="menu-item" data-window="1">
+                                <div class="icon-container">
+                                    <i class="fas fa-window-maximize"></i>
+                                </div>
+                                <span>Front Right</span>
+                                <div class="status-indicator" id="window-status-1"></div>
+                            </div>
+                            <div class="menu-item" data-window="2">
+                                <div class="icon-container">
+                                    <i class="fas fa-window-maximize"></i>
+                                </div>
+                                <span>Rear Left</span>
+                                <div class="status-indicator" id="window-status-2"></div>
+                            </div>
+                            <div class="menu-item" data-window="3">
+                                <div class="icon-container">
+                                    <i class="fas fa-window-maximize"></i>
+                                </div>
+                                <span>Rear Right</span>
+                                <div class="status-indicator" id="window-status-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="seats-tab">
+                        <div class="menu-grid" id="seats-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quick-access">
+            <div class="quick-access-item" id="quick-engine">
+                <i class="fas fa-power-off"></i>
+            </div>
+            <div class="quick-access-item" id="quick-doors">
+                <i class="fas fa-door-open"></i>
+            </div>
+            <div class="quick-access-item" id="quick-windows">
+                <i class="fas fa-window-maximize"></i>
+            </div>
+            <div class="quick-access-item" id="quick-driver">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

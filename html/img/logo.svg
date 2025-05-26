@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .car-body { fill: #8a2be2; }
+    .wheel { fill: #333; stroke: #9d4edd; stroke-width: 2; }
+    .window { fill: #d8b5ff; opacity: 0.7; }
+    .light { fill: #fff; }
+  </style>
+  
+  <!-- Car body -->
+  <path class="car-body" d="M15,60 C15,55 20,50 25,50 L75,50 C80,50 85,55 85,60 L85,70 C85,75 80,80 75,80 L25,80 C20,80 15,75 15,70 Z" />
+  
+  <!-- Car roof -->
+  <path class="car-body" d="M30,50 L30,35 C30,30 40,25 50,25 C60,25 70,30 70,35 L70,50 Z" />
+  
+  <!-- Windows -->
+  <path class="window" d="M32,48 L32,37 C32,34 40,30 50,30 C60,30 68,34 68,37 L68,48 Z" />
+  
+  <!-- Wheels -->
+  <circle class="wheel" cx="30" cy="80" r="10" />
+  <circle class="wheel" cx="70" cy="80" r="10" />
+  
+  <!-- Lights -->
+  <rect class="light" x="18" y="55" width="5" height="5" rx="2" />
+  <rect class="light" x="77" y="55" width="5" height="5" rx="2" />
+  
+  <!-- Grill -->
+  <rect class="car-body" x="40" y="75" width="20" height="3" rx="1" />
+  
+  <!-- Alpha Text -->
+  <text x="50" y="95" font-family="Arial" font-size="10" fill="#8a2be2" text-anchor="middle">ALPHA</text>
+</svg>
